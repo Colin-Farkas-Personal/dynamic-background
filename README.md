@@ -1,4 +1,4 @@
-<img src="assets/logo-dynamic-background.svg" alt="Logo of dynamic background">
+<img src="assets/logo.svg" alt="Logo of dynamic background">
 
 # **Dynamic Background**
 A tool for creating stunning, animated gradient backgrounds from your images.
