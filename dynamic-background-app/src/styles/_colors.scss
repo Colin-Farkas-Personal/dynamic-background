@@ -1,8 +1,22 @@
-// DEFAULT
+// COLORS
 $white: #f1f1f1;
-$grey: #eeeeee;
+$grey: #c4c4c4;
+$grey-800: #595A5B;
 $dark: #07080B;
+$dark-100: #191a1f;
+$dark-200: #2a30350c;
+$dark-300: #0c0d13;
 
-$header-default: $grey;
-$paragraph-default: $grey;
-$home-background-color: $dark;
+// DEFAULT
+$header--default: $white;
+$subtitle--default: $grey;
+$paragraph--default: $grey;
+$button--default: $white;
+
+$home--background-color: $dark;
+
+// PAGES
+$card-main--background-color: $dark-300;
+$card-main--color: $grey-800;
+$card-main--color--hover: rgba($dark-100, 0.2);
+$card-main--border--hover: $dark-200;

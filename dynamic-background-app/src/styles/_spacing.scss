@@ -1,7 +1,14 @@
-body, html {
-   min-height: 100vh;
-  }
-  
-  .main-container {
-   max-width: 1080px;
-  }
+// MOBILE SIZES
+$ms: 320px;
+$mm: 375px;
+$ml: 425px;
+
+// TABLET SIZES
+$t: 768px;
+
+// LAPTOP SIZES
+$l: 1024px;
+$ll: 1440px;
+
+// 4K
+$bs: 2560px;
