@@ -17,6 +17,7 @@ function DropImageCard() {
     const handleLeave = (e: React.MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         e.preventDefault();
 
+        // Test commit
         e.currentTarget.style.background = "";
     }
 
