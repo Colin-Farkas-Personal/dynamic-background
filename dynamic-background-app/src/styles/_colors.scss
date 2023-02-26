@@ -1,6 +1,7 @@
 // COLORS
 $white: #f1f1f1;
 $grey: #c4c4c4;
+$grey-600: #969797;
 $grey-800: #595A5B;
 $dark: #07080B;
 $dark-100: #191a1f;
@@ -17,6 +18,6 @@ $home--background-color: $dark;
 
 // PAGES
 $card-main--background-color: $dark-300;
-$card-main--color: $grey-800;
-$card-main--color--hover: rgba($dark-100, 0.2);
+$card-main--color: rgba($white, 0.4);
+$card-main--color--hover: rgba($dark, 0.2);
 $card-main--border--hover: $dark-200;

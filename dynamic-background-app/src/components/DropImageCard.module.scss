@@ -36,8 +36,9 @@
         cursor: pointer;
         scale: 1.1;
 
-        background: rgb(252,234,187);
-        background: linear-gradient(95deg, rgba(252,234,187,1) 0%, rgba(248,181,0,1) 100%);
+        .card__text {
+            color: c.$white;
+        }
     }
 
     &__text {
@@ -64,7 +65,7 @@
 
         &:hover {
             cursor: pointer;
-            border: 2px solid c.$card-main--color--hover;
+            border: 2px solid #ffffff00;
             background-color: c.$card-main--color--hover;
             color: c.$white;
         }
