@@ -1,23 +1,45 @@
+@use 'utilities/functions.scss' as functions;
+
+
+
 // COLORS
-$white: #f1f1f1;
-$grey: #c4c4c4;
-$grey-600: #969797;
-$grey-800: #595A5B;
-$dark: #07080B;
-$dark-100: #191a1f;
-$dark-200: #2a30350c;
-$dark-300: #0c0d13;
+$white: functions.color(oklch(95.81% 0 0), #f1f1f1);
+
+$gray-100: #e2e2e2;
+$gray-200: #d8d8d8;
+$gray-300: #c7c7c7;
+$gray-400: #bcbcbc;
+$gray-500: #a7a7a7;
+$gray-600: #919191;
+$gray-700: #7b7b7b;
+$gray-800: #555555;
+$gray-900: #3a3a3a;
+$gray-A100: #303438;
+$gray-A200: #1b1f22;
+
+$black: functions.color(oklch(13.46% 0.007 269), #07080b);
+$black-100: #0c0d13;
+$black-200: #0f1016;
+$black-300: #121317;
+$black-400: #17181c;
+$black-500: #222327;
+$black-600: #222327;
+$black-700: #2a30350c;
+$black-800: #2a30350c;
+$black-900: #2a30350c;
+
 
 // DEFAULT
-$header--default: $white;
-$subtitle--default: $grey;
-$paragraph--default: $grey;
-$button--default: $white;
-
-$home--background-color: $dark;
+$header-default-color: $white;
+$subtitle-default-color: $gray-300;
+$paragraph-default-color: $gray-700;
+$button-default-color: $white;
 
 // PAGES
-$card-main--background-color: $dark-300;
-$card-main--color: rgba($white, 0.4);
-$card-main-button--color: rgba($white, 0.03);
-$card-main--color--hover: rgba($dark, 0.2);
+$header-home-color: $white;
+$paragraph-home-color: $gray-700; 
+$home-background: $black;
+$card-home-background: $black-200;
+$card-home-color: rgba($white, 0.2);
+$card-home-button-background: rgba($black, 40%);
+$card-home-button-background--hover: rgba($black, 50%);

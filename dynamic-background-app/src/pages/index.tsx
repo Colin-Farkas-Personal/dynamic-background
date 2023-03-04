@@ -18,15 +18,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={classNames(styles.home)}>
-        <div className={styles['home__body-section']}>
-        <section className={styles['home__header']}>
-          <h1>Dynamic Background</h1>
-          <p>Drop your image in the box below to add a dynamic background to it</p>
+        <section className={styles['home__body-section']}>
+          <div className={styles['home__header']}>
+            <h1>Dynamic Background</h1>
+            <p>Drop your image in the box below to add a dynamic background to it</p>
+          </div>
+          <div className={styles['home__drop-image-card']}>
+            <DropImageCard/>
+          </div>
         </section>
-        <section className={styles['home__drop-image-card']}>
-          <DropImageCard/>
-        </section>
-        </div>
       </main>
     </>
   )

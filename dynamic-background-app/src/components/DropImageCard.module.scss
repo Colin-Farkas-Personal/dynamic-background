@@ -1,4 +1,8 @@
-@use '../styles/_colors' as c;
+@use '../styles/styles';
+
+.card {
+    background-color: styles.$card-home-background;
+}
 
 .card {
     position: relative;
@@ -8,16 +12,15 @@
     gap: 16px;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
-    height: 22rem;
-
+    
+    width: 30vw;
+    height: 15vw;
+    max-width: 800px;
+    max-height: 400px;
     padding: 4.2rem;
     border-radius: 0.8rem;
 
-    // border: 2px solid c.$card-border--color;
-    background-color: c.$card-main--background-color;
-    // box-shadow: 0px 0px 150px 60px hsla(216, 95%, 45%, 0.2);
-
+    background-color: styles.$card-home-background;
     transition: scale 300ms;
 
     &::before {
@@ -29,7 +32,8 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: linear-gradient(125deg, rgba(c.$card-main--background-color, 0) 50%, rgba(18,68,245,.15) 100%);
+        // background: linear-gradient(125deg, rgba(styles.$card-home-background, 0) 50%, rgba(18,68,245,.15) 100%);
+        border-radius: 0.8rem;
     }
 
     &:hover {
@@ -37,24 +41,27 @@
         scale: 1.1;
 
         .card__text {
-            color: c.$white;
+            color: styles.$white;
         }
         .card__button {
-            background-color: c.$card-main--color--hover;
-            color: c.$white;
+            color: styles.$gray-500;
         }
     }
 
     &__text {
         font-size: 18px;
         font-weight: bold;
-        color: c.$card-main--color;
+        color: styles.$card-home-color;
+        
+        @media all and (max-width: styles.$t) {
+            font-size: 14px;
+        }
     }
 
     &__icon {
         width: 24px;
         height: 24px;
-        color: c.$card-main--color;
+        color: styles.$card-home-color;
     }
 
     
@@ -65,18 +72,35 @@
         
         padding: 1rem 1.6rem;
         border-radius: 6px;
-        background-color: c.$card-main-button--color;
-        color: c.$card-main--color;
+        background-color: styles.$card-home-button-background;
+        color:  styles.$card-home-color;
         font-weight: bold;
         
         &:hover {
             cursor: pointer !important;
-            background-color: rgba(c.$dark, 0.4) !important;
-            color: c.$white !important;
+            background-color: styles.$card-home-button-background--hover !important;
+            color: styles.$white !important;
         }
         &:active {
-            color: c.$card-main--color !important;
+            color: styles.$card-home-color !important;
         }
-        
+    }
+    
+    @media all and (max-height: styles.$l) {
+        max-height: 300px;
+    }
+    @media all and (max-width: styles.$t) {
+        &:hover {
+            scale: none;
+        }
+    }
+    @media all and (max-width: styles.$ml) {
+        padding: 1rem 0;
+        height: auto;
+        width: 100%;
+
+        &:hover {
+            scale: none;
+        }
     }
 }

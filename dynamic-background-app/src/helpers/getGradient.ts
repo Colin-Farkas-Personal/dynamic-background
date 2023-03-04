@@ -1,37 +1,51 @@
 import gradients from '@/styles/gradients/gradients.json';
 
-export default function getLinearGradient(): string {
+let generatedGradient: Array<string> = [];
+
+function getRandomGradientColors(): void {
+    const gradientIndex: number = getRandomInt(0, (gradients.length) - 1);
+    generatedGradient = gradients[gradientIndex];
+}
+
+// box-shadow: 0px 0px 100px 30px rgba(163, 209, 76, 0.123);
+export function getBoxShadowStyle(): string {
+    if (!gradients) return '';
+
+    const selectedGradient: Array<string> = generatedGradient;
+    const selectedColorIndex: number = getRandomInt(0, selectedGradient.length - 1);
+
+    const alpha = '40';
+    let colorHex: string = selectedGradient[selectedColorIndex];
+    colorHex = insert(colorHex, colorHex.length, alpha);
+
+    return `0px 0px 200px 40px ${colorHex}`;
+}
+
+// background: linear-gradient(95deg, rgba(252,234,187,1) 0%, rgba(248,181,0,1) 100%);
+export function getLinearGradientStyle(): string {
     // Get gradient from list
-    if (!gradients) return "";
+    if (!gradients) return '';
 
     let gradient: string = 'linear-gradient()';
 
     const degrees: number = getRandomInt(0, 365)
-    // txt1.slice(0, 3) + "bar" + txt1.slice(3);
     gradient = `linear-gradient(${degrees}deg,`;
-
-    const gradientIndex: number = getRandomInt(0, (gradients.length) - 1);
     
-    const selectedGradient: Array<string> = gradients[gradientIndex];
+    getRandomGradientColors();
+    const selectedGradient = generatedGradient; 
 
     selectedGradient.forEach((color, i) => {
         const insertIndex = gradient.length;
-        console.log("INDEX: ", i);
-        console.log("LENGTH: ", selectedGradient.length);
 
         if (i >= selectedGradient.length - 1) {
-            console.log("B");
             gradient = insert(gradient, insertIndex, ` ${color} 100%)`);
             return;
         }
 
-        console.log("A");
         gradient = insert(gradient, insertIndex, ` ${color} 0%,`);
     })
 
     return gradient;
-
-    // background: linear-gradient(95deg, rgba(252,234,187,1) 0%, rgba(248,181,0,1) 100%);
 }
 
 function insert(str: string, index: number, value: string) {

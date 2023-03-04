@@ -1,5 +1,5 @@
-// STYLESHEET RESET
-@use '_reset.scss';
-@use '_fonts.scss' as f;
-@use '_colors.scss' as c;
-@use '_spacing.scss' as s;
+// GLOBAL MODULE
+@use "reset";
+@use "colors";
+@use "fonts" ;
+@use "spacing";

@@ -1,0 +1,9 @@
+@function color($value, $fallback) 
+{
+    $color: oklch($value);
+    @if type-of($color) == color {
+      @return $color;
+    } @else {
+      @return $fallback;
+    }
+}

@@ -1,5 +1,8 @@
-@use '_colors.scss' as c;
-@use '_spacing.scss' as s;
+@use 'styles' as styles;
+
+.home {
+  background-color: styles.$gray-600;
+}
 
 .home {
   position: relative;
@@ -11,19 +14,42 @@
   height: 100vh;
   overflow-y: scroll;
 
-  background-color: c.$home--background-color;
+  background-color: styles.$home-background;
 
 
   & > * {
-    max-width: s.$l;
-    margin: 0 1rem;
-
+    position: relative;
+    max-width: styles.$ll;
     text-align: center;
+    margin: 4vw;
   }
 
+  &__header {
+    h1 {
+      color: styles.$header-home-color;
+    }
+    p {
+      color: styles.$paragraph-home-color;
+    }
+  }
+  
   &__body-section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+  }
+
+  @media all and (max-width: styles.$mm) {
+    & > * {
+      max-width: styles.$ml;
+    }
+  }
+  @media all and (max-width: styles.$l) {
+    align-items: normal;
+
+    & > * {
+      max-width: styles.$t;
+    }
   }
 }
