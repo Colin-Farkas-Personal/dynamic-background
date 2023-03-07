@@ -37,16 +37,8 @@ h2 {
 }
 
 span {
-    font-size: 34px;
-    font-weight: bold;
     font-family: 'Roboto Mono', monospace;
     color: colors.$subtitle-default-color;
-    margin-bottom: 2.4rem;
-
-    @media all and (max-width: spacing.$t) {
-        font-size: 24px;
-        margin-bottom: 1.8rem;
-    }
 }
 
 p {
