@@ -14,6 +14,8 @@
     max-height: 400px;
     padding: 4.2rem;
     border-radius: 0.8rem;
+    
+    cursor: default;
 
     background-color: styles.$card-home-background;
     transition: scale 300ms;
@@ -43,13 +45,7 @@
     }
 
     input {
-        background-color: blue;
         display: none;
-        background-color: pink;
-    }
-
-    label {
-        pointer-events:none;
     }
 
     &__header {
